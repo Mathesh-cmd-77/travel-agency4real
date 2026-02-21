@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel agency</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    background: rgb(243, 243, 243);
+
+}
+.section-content{
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1300px;
+}
+.navbar .logo .logo-text
+{
+    color:rgb(40, 38, 36);
+}
+ul{
+     list-style: none;
+}
+a{
+    text-decoration: none; color: rgb(29, 27, 26);
+}
+button{
+    cursor: pointer;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+ .navbar .nav-link {
+    display: flex;
+   
+    align-items: center;
+    gap: 10px;
+
+}
+.nav-item{
+    background-color: rgb(200, 128, 76);
+    padding: 10px 30px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+.nav-item:hover{
+    background-color: darkorange;
+    transform: translate(0px, -3px);
+    
+}
+.btn{
+    background: rgb(145, 133, 136);
+    border-radius: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    font-weight: 600;
+    padding: 20px;
+    justify-self: center;
+    transition: 0.3s ease;
+    margin-top: 20px;
+}
+.btn:hover{
+    background-color: rgb(153, 133, 102);
+    transform: translate(0px, -3px);
+}
+.background{
+    background-image: url('https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    height: 150vh;
+    overflow: hidden;
+}
+.destination{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 40px;
+    gap: 10px;
+    margin-left: 40px;
+      margin-right: 40px;
+
+
+}
+.cityparis{
+    gap: 10px;
+    justify-self: center;
+    padding: 20px;
+    background-image: url('https://framerusercontent.com/images/K5xJrjRSjZv2La92oWu8FjSv274.webp?width=5184&height=3456');
+    background-size: cover;
+    background-position: center;
+    border-radius: 35px;
+    height: 400px;
+    width: 350px;
+    transition: 0.3s ease;
+}
+.cityparis:hover{
+    transform: scale(1.03);
+}
+.citytokyo{
+    gap: 10px;
+    justify-self: center;
+    padding: 20px;
+    background-image: url('https://travel.rakuten.com/contents/sites/contents/files/styles/max_1300x1300/public/2024-01/cherry-blossom-tokyo_5.jpg?itok=2DshBXQX');
+    background-size: cover;
+    background-position: center;
+    border-radius: 35px;
+    height: 400px;
+    width: 350px;
+    transition: 0.3s ease;
+
+}
+.citytokyo:hover{
+       transform: scale(1.03);
+}
+.cityitaly{
+    gap: 10px;
+    justify-self: center;
+    padding: 20px;
+    background-image: url('https://thattravelista.com/wp-content/uploads/2020/06/Italy-Venice-77.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 35px;
+    height: 400px;
+    width: 350px;
+    transition: 0.3s ease;
+
+}
+.cityitaly:hover{
+       transform: scale(1.03);
+}
+.cityname{
+    justify-self: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    font-weight: 530;
+    color: rgb(0, 0, 0);
+    font-style: italic;
+}
+.contact{
+    display: flex;
+    padding: 30px;
+    border-top: 1px solid rgb(0, 0, 0);
+}
+html{
+    scroll-behavior: smooth;
+}
+.plans{
+   
+    background: rgb(243, 243, 243);
+    min-height: 100vh;
+    padding : 20px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+    margin-top: 7%;
+    color: rgb(0, 0, 0);
+   
+}
+.plans:hover{
+    transform: scale(1.02);
+}
+.ourplans{
+    text-align: center;
+
+}
+.plansgrid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px;
+    justify-items: center;
+}
+.basic, .premium, .family{
+    background: rgb(189, 162, 143);
+    padding: 20px;
+    border-radius: 20px;
+    height:400px;
+    width:350px;
+}
+/* --- MOBILE OPTIMIZATION --- */
+@media (max-width: 768px) {
+    
+    /* 1. Stack the Navigation Bar */
+    .navbar {
+        flex-direction: column; /* Stacks the logo and links vertically */
+        gap: 15px;
+    }
+
+    
+    .destination, .plansgrid {
+        grid-template-columns: 1fr; 
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .cityparis, .citytokyo, .cityitaly, .basic, .premium, .family {
+        width: 100%; 
+        height: 300px;
+    }
+    .background {
+        height: auto; 
+        padding-bottom: 50px;
+    }
+}
+</style>
+    
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h2 class="logo-text">Travel Agency</h2></div>
+            <ul class="nav-link">
+                <li class="nav-item"><a href="#">Home</a></li>
+                <li class="nav-item"><a href="#destination">Destinations</a></li>
+                <li class="nav-item"><a href="#">Plans</a></li>
+                <li class="nav-item"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="background" margin-left="20px" margin-right="20px">
+           <center> <h1 style="margin-top: 3%;">Explore the world with us</h1>
+            <p>Discover amazing destinations and unforgettable experiences.</p></center>
+           <div class="btn">  <a href="#" class="btn">Book Now</a></div>
+           <div class="destination" id="destination">
+            <div class="cityparis"><div class="cityname">Paris</div> 
+        <div  class="explanation" style="padding-left: 19px;">The city of love. <br> 
+             4 days & 5 nights. <br>
+             Luxurious experience with excuisite amenities.</div></div>
+            <div class="citytokyo"><div class="cityname">Tokyo</div>
+        <div  class="explanation" style="padding-left: 19px;">The city of lights. <br> 
+             5 days & 6 nights. <br>
+             Enriching stay with world class cuisine.</div></div>
+            <div class="cityitaly"><div class="cityname">Italy </div><div  class="explanation" style="padding-left: 19px;">The land of art and history. <br>
+             6 days & 7 nights. <br>
+             A perfect blend of tradition and modernity.</div></div> </div>
+    
+           </div>
+             <div class="plans">
+            <h1 class="ourplans">Our Plans</h1>
+            <br>
+            <p style="text-align: center;">Perfectly tailored for your needs</p>
+         <div class="plansgrid"> <div class="basic"> Basic Plan: Ideal for solo travelers or couples seeking a budget-friendly option. Includes accommodation, airport transfers, and a selection of local tours and activities.</div>
+         
+           <div class="premium"> Premium Plan: Designed for those who want a more luxurious experience. Includes all the benefits of the Basic Plan, plus upgraded accommodations, private transfers, and exclusive access to premium tours and activities.</div>
+               
+            <div class="family">Family Plan: Perfect for families or groups. Includes spacious accommodations, family-friendly tours and activities, and special discounts for children.</div>
+               </div>       
+            
+
+
+
+
+
+             </div>
+          
+        </section>
+      
+    </main>
+    <footer class="contact" id="contact">
+        Contact us: Travelagency@gmail.com</footer>
+    
+</body>
+</html>
